@@ -23,6 +23,7 @@ class SppagebuilderAddonImage extends SppagebuilderAddons{
 		$link = (isset($this->addon->settings->link) && $this->addon->settings->link) ? $this->addon->settings->link : '';
 		$target = (isset($this->addon->settings->target) && $this->addon->settings->target) ? 'target="' . $this->addon->settings->target . '"' : '';
 		$open_lightbox = (isset($this->addon->settings->open_lightbox) && $this->addon->settings->open_lightbox) ? $this->addon->settings->open_lightbox : 0;
+		$group = (isset($this->addon->settings->group) && $this->addon->settings->group) ? $this->addon->settings->group : '';
 		$image_overlay = (isset($this->addon->settings->overlay_color) && $this->addon->settings->overlay_color) ? 1 : 0;
 
 		$output = '';
@@ -39,7 +40,7 @@ class SppagebuilderAddonImage extends SppagebuilderAddons{
 			}
 
 			if($open_lightbox) {
-				$output .= '<a class="sppb-magnific-popup sppb-addon-image-overlay-icon" data-popup_type="image" data-mainclass="mfp-no-margins mfp-with-zoom" href="' . $image . '">+</a>';
+				$output .= '<a class="cartonbox sppb-addon-image-overlay-icon" data-cb-type="img" data-cb-group="' . $group . '" data-mainclass="mfp-no-margins mfp-with-zoom" href="' . $image . '">+</a>';
 			}
 
 			if(!$open_lightbox) {
