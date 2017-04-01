@@ -40,7 +40,7 @@ class SppagebuilderAddonImage extends SppagebuilderAddons{
 			}
 
 			if($open_lightbox) {
-				$output .= '<a class="cartonbox sppb-addon-image-overlay-icon" data-cb-type="img" data-cb-group="' . $group . '" data-mainclass="mfp-no-margins mfp-with-zoom" href="' . $image . '">+</a>';
+				$output .= '<a class="cartonbox sppb-addon-image-overlay-icon" data-cb-type="img" data-cb-group="' . $group . '" data-cb-caption="'. $alt_text .'" data-mainclass="mfp-no-margins mfp-with-zoom" href="' . $image . '">+</a>';
 			}
 
 			if(!$open_lightbox) {
