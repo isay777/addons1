@@ -62,11 +62,11 @@ class SppagebuilderAddonImage extends SppagebuilderAddons{
 	}
 
 	public function scripts() {
-		return array(JURI::base(true) . '/components/com_sppagebuilder/assets/js/jquery.magnific-popup.min.js');
+		return array(JURI::base(true) . '/components/com_sppagebuilder/assets/js/cartonbox.min.js');
 	}
 
 	public function stylesheets() {
-		return array(JURI::base(true) . '/components/com_sppagebuilder/assets/css/magnific-popup.css');
+		return array(JURI::base(true) . '/components/com_sppagebuilder/assets/css/cartonbox.min.css');
 	}
 
 	public function css() {
