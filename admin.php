@@ -169,6 +169,17 @@ SpAddonsConfig::addonConfig(
 						array('image', '!=', ''),
 					),
 				),
+				
+				'group'=>array(
+					'type'=>'text',
+					'title'=>JText::_('group'),
+					'desc'=>JText::_('group tag'),
+					'std'=>'',
+					'depends'=>array(
+						array('image', '!=', ''),
+						array('open_lightbox', '!=', 1),
+					),
+				),
 
 				'overlay_color'=>array(
 					'type'=>'color',
