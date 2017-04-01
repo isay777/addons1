@@ -61,13 +61,20 @@ class SppagebuilderAddonImage extends SppagebuilderAddons{
 		return $output;
 	}
 
+	
 	public function scripts() {
-		return array(JURI::base(true) . '/components/com_sppagebuilder/assets/js/cartonbox.min.js');
-	}
+        $app = JFactory::getApplication();
+        $base_path = JURI::base() . '/templates/' . $app->getTemplate() . '/js/';
+        return array($base_path . 'cartonbox.min.js');
+         }
 
-	public function stylesheets() {
-		return array(JURI::base(true) . '/components/com_sppagebuilder/assets/css/cartonbox.min.css');
-	}
+	
+	
+	public function scripts() {
+        $app = JFactory::getApplication();
+        $base_path = JURI::base() . '/templates/' . $app->getTemplate() . '/css/';
+        return array($base_path . 'cartonbox.min.css');
+         }
 
 	public function css() {
 		$addon_id = '#sppb-addon-' . $this->addon->id;
